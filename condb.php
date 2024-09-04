@@ -1,0 +1,15 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "DB_654230044";
+$table = "tb_football_tickets";
+
+try {
+$conn = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// echo "เชื่อมต่อฐานข้อมูลสําเร็จ";
+} catch(PDOException $e) {
+echo "การเชื่อมต่อฐานข้อมูลผิดพลาด: " . $e->getMessage();
+};
+?>
